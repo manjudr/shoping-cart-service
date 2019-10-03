@@ -1,3 +1,7 @@
+/**
+  * Author : Manjunath Davanam <manjunathdavanam@gmail.com>
+  */
+
 import com.equalexperts.service.{CartService, ItemService}
 
 object ShoppingCart {

@@ -1,3 +1,7 @@
+/**
+  * Author : Manjunath Davanam <manjunathdavanam@gmail.com>
+  */
+
 package com.equalexperts.service
 
 class TestCartService extends BaseSpec {
@@ -71,5 +75,4 @@ class TestCartService extends BaseSpec {
       }
     }
   }
-
 }

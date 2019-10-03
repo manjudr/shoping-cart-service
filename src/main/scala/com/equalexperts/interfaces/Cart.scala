@@ -1,3 +1,6 @@
+/**
+  * Author : Manjunath Davanam <manjunathdavanam@gmail.com>
+  */
 package com.equalexperts.interfaces
 
 import com.equalexperts.models.{Bill, Item}
@@ -66,5 +69,6 @@ trait Cart {
     * @return Billing information
     */
   def getBillDetails: Bill
+
 
 }

@@ -1,3 +1,6 @@
+/**
+  * Author : Manjunath Davanam <manjunathdavanam@gmail.com>
+  */
 package com.equalexperts.service
 
 import com.equalexperts.interfaces.Cart

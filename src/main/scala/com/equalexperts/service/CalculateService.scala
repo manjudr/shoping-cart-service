@@ -1,9 +1,12 @@
+/**
+  * Author : Manjunath Davanam <manjunathdavanam@gmail.com>
+  */
+
 package com.equalexperts.service
 
 import com.equalexperts.models.{Bill, Item}
 
 import scala.collection.mutable.ArrayBuffer
-
 
 
 /**

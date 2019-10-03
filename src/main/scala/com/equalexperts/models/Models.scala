@@ -1,3 +1,7 @@
+/**
+  * Author : Manjunath Davanam <manjunathdavanam@gmail.com>
+  */
+
 package com.equalexperts.models
 
 import java.io.Serializable
