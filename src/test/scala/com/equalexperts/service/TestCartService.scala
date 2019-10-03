@@ -2,6 +2,10 @@
   * Author : Manjunath Davanam <manjunathdavanam@gmail.com>
   */
 
+/** *
+  * ZIP -1 : Add products to the shopping cart.
+  */
+
 package com.equalexperts.service
 
 class TestCartService extends BaseSpec {

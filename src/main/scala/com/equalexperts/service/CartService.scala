@@ -25,7 +25,7 @@ class CartService extends Cart {
       val cartItem = this.getItem(identifier)
       if (null != cartItem) {
         // If user is adding same item then just update the units
-        cart.map(item => item.units = Some(item.units.getOrElse(0) + units))
+        cart.foreach(item => item.units = Some(item.units.getOrElse(0) + units))
       } else {
         catalogItem.units = Option(units)
         cart += catalogItem
