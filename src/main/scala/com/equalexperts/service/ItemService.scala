@@ -1,6 +1,6 @@
 package com.equalexperts.service
 
-import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.ArrayBuffer
 
 /**
   * Item/Product meta data
@@ -12,12 +12,13 @@ import scala.collection.mutable.ListBuffer
   * @param discount    - Item discount
   * @param isAvailable - Item status
   */
-case class Item(identifier: String,
-                name: String,
-                description: String,
-                price: String,
-                discount: String,
-                isAvailable: Boolean
+case class Item(var identifier: String,
+                var name: String,
+                var description: String,
+                var price: Double,
+                var discount: String,
+                var isAvailable: Boolean,
+                var units: Option[Int]
                )
 
 object ItemService {
@@ -25,7 +26,7 @@ object ItemService {
     * Catalog - Which contains all the items, Where admin can add items to catalog.
     * Then item will be available in the website.
     */
-  private var catalogList: ListBuffer[Item] = ListBuffer()
+  private var catalogList: ArrayBuffer[Item] = ArrayBuffer()
 
   /**
     * To get the price of the particular item
@@ -33,11 +34,8 @@ object ItemService {
     * @param identifier - Item Identifier
     * @return - Item Price
     */
-  def getPrice(identifier: String): Long = {
-    catalogList.map(item => {
-      item.price
-    })
-    null
+  def getPrice(identifier: String): Double = {
+    catalogList.filter(x => x.identifier == identifier).head.price
   }
 
   /**
@@ -46,8 +44,8 @@ object ItemService {
     * @param identifier - Item Identifier
     * @return
     */
-  def getMetaData(identifier: String): Map[String, Map[String, String]] = {
-    null
+  def getItem(identifier: String): Item = {
+    catalogList.filter(x => x.identifier == identifier).head
   }
 
   /**
@@ -57,7 +55,8 @@ object ItemService {
     * @return
     */
   def isAvailable(identifier: String): Boolean = {
-    null
+    val item = catalogList.filter(x => x.identifier == identifier)
+    if (item.nonEmpty) item.head.isAvailable else false
   }
 
   /**
@@ -65,8 +64,18 @@ object ItemService {
     *
     * @param items - List of items need to add into catalog.
     */
-  def updateCatalog(items: List[Item]): Unit = {
-    catalogList = ListBuffer.concat(catalogList, items)
+  def updateCatalog(items: Array[Item]): Unit = {
+    catalogList = (catalogList ++ items).distinct
+  }
+
+  /**
+    *
+    * @param item
+    * @param price
+    * @return
+    */
+  def updateItemPrice(item: String, price: Double): Boolean = {
+    true
   }
 
 }
