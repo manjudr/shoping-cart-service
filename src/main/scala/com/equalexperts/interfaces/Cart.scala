@@ -1,6 +1,6 @@
 package com.equalexperts.interfaces
 
-import com.equalexperts.service.{Item, Bill}
+import com.equalexperts.models.{Bill, Item}
 
 import scala.collection.mutable.ArrayBuffer
 

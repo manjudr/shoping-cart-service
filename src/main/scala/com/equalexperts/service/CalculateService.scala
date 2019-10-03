@@ -1,20 +1,10 @@
 package com.equalexperts.service
 
+import com.equalexperts.models.{Bill, Item}
+
 import scala.collection.mutable.ArrayBuffer
 
-/**
-  * Which defines the billing spec
-  *
-  * @param items           - Items which is purchased.
-  * @param taxInPercentage - Total tax amount in percentage.
-  * @param totalTax        - Total tax amount for the purchasing items
-  * @param totalAmount     - Total Amount including tax (Tax + purchasedItemAmount)
-  */
-case class Bill(items: ArrayBuffer[Item],
-                taxInPercentage: Double,
-                totalTax: Double,
-                totalAmount: Double
-               )
+
 
 /**
   * Service which helps to provide detail spec of the billing information

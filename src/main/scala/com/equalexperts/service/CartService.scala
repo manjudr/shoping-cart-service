@@ -1,6 +1,7 @@
 package com.equalexperts.service
 
 import com.equalexperts.interfaces.Cart
+import com.equalexperts.models.{Bill, Item}
 
 import scala.collection.mutable.ArrayBuffer
 

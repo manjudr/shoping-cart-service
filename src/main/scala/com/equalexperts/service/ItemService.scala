@@ -1,25 +1,9 @@
 package com.equalexperts.service
 
+import com.equalexperts.models.Item
+
 import scala.collection.mutable.ArrayBuffer
 
-/**
-  * Item/Product meta data
-  *
-  * @param identifier  - Item identifier
-  * @param name        - Item Name
-  * @param description - Item Description
-  * @param price       - Item price
-  * @param discount    - Item discount
-  * @param isAvailable - Item status
-  */
-case class Item(var identifier: String,
-                var name: String,
-                var description: String,
-                var price: Double,
-                var discount: String,
-                var isAvailable: Boolean,
-                var units: Option[Int]
-               )
 
 object ItemService {
   /**
@@ -66,16 +50,6 @@ object ItemService {
     */
   def updateCatalog(items: Array[Item]): Unit = {
     catalogList = (catalogList ++ items).distinct
-  }
-
-  /**
-    *
-    * @param item
-    * @param price
-    * @return
-    */
-  def updateItemPrice(item: String, price: Double): Boolean = {
-    true
   }
 
 }

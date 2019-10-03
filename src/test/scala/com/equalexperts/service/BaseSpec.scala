@@ -1,5 +1,6 @@
 package com.equalexperts.service
 
+import com.equalexperts.models.Item
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import org.scalatest.FreeSpec

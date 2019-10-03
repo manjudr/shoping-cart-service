@@ -17,7 +17,6 @@ class TestCartService extends BaseSpec {
       *  2.A product, Dove Soap with a unit price of 39.99
       */
     CartService.clearCart
-    ItemService.updateItemPrice(DOVE_SOAP_IDENTIFIER, 39.99)
 
     "When The user adds 5 Dove Soaps to the shopping cart" - {
       "The shopping cart should contain 5 Dove Soaps each with a unit price of 39.99" in {
