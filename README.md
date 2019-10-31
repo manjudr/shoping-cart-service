@@ -5,7 +5,7 @@
 A shopping CartService is a piece of software that keeps the record of the items a buyer has 'picked up' from the online store.
 
 
-## Architecture:
+## Design:
 
 ![alt text](https://github.com/manjudr/shoping-cart-service/raw/master/highLevelDesign.png)
 
